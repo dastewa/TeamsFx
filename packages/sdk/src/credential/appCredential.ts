@@ -57,6 +57,7 @@ export class AppCredential implements TokenCredential {
    * ```
    *
    * @param {string | string[]} scopes - The list of scopes for which the token will have access.
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    * @param {GetTokenOptions} options - The options used to configure any requests this TokenCredential implementation might make.
    *
    * @throws {@link ErrorCode|ServiceError} when get access token with authentication error.

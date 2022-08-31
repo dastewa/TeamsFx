@@ -30,6 +30,9 @@ export class TeamsUserCredential implements TokenCredential {
    * Popup login page to get user's access token with specific scopes.
    * @remarks
    * Can only be used within Teams.
+   * 
+   * @param {string | string[]} scopes - The list of scopes for which the token will have access.
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    */
   public async login(scopes: string | string[], resources?: string[]): Promise<void> {
     throw new ErrorWithCode(
@@ -42,6 +45,9 @@ export class TeamsUserCredential implements TokenCredential {
    * Get access token from credential.
    * @remarks
    * Can only be used within Teams.
+   * 
+   * @param {string | string[]} scopes - The list of scopes for which the token will have access.
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    */
   async getToken(
     scopes: string | string[],

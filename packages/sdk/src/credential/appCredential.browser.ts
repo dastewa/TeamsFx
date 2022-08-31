@@ -28,6 +28,7 @@ export class AppCredential implements TokenCredential {
 
   /**
    * Get access token for credential.
+   * @param {string | string[]} scopes - The list of scopes for which the token will have access.
    * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    * @remarks
    * Only works in in server side.

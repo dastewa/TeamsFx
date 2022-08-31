@@ -78,6 +78,7 @@ export class TeamsUserCredential implements TokenCredential {
    * await credential.login("https://graph.microsoft.com/User.Read Calendars.Read"); // multiple scopes using string
    * ```
    * @param scopes - The list of scopes for which the token will have access, before that, we will request user to consent.
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    *
    * @throws {@link ErrorCode|InternalError} when failed to login with unknown error.
    * @throws {@link ErrorCode|ConsentFailed} when user canceled or failed to consent.
@@ -254,6 +255,7 @@ export class TeamsUserCredential implements TokenCredential {
    * ```typescript
    * const currentUser = await credential.getUserInfo();
    * ```
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    *
    * @throws {@link ErrorCode|InternalError} when SSO token from Teams client is not valid.
    * @throws {@link ErrorCode|InvalidParameter} when SSO token from Teams client is empty.

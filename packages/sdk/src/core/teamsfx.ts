@@ -124,7 +124,8 @@ export class TeamsFx implements TeamsFxConfiguration {
    * await teamsfx.login("https://graph.microsoft.com/User.Read Calendars.Read"); // multiple scopes using string
    * ```
    * @param scopes - The list of scopes for which the token will have access, before that, we will request user to consent.
-   *
+   * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
+   * 
    * @throws {@link ErrorCode|InternalError} when failed to login with unknown error.
    * @throws {@link ErrorCode|ConsentFailed} when user canceled or failed to consent.
    * @throws {@link ErrorCode|InvalidParameter} when scopes is not a valid string or string array.

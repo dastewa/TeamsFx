@@ -29,6 +29,7 @@ export class OnBehalfOfUserCredential implements TokenCredential {
 
   /**
    * Get access token from credential.
+   * @param {string | string[]} scopes - The list of scopes for which the token will have access.
    * @param {string[]} resources - An optional list of resource for which to acquire the access token; only used for full trust apps.
    * @remarks
    * Can only be used in server side.
